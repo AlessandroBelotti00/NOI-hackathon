@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime, time
+import datetime
 from matplotlib import pyplot as plt
 
 building_consumption = pd.read_csv("data/Office building.csv")
