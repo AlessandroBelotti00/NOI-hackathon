@@ -1,2 +1,0 @@
-weather,base,visibility,dt,timezone,id,name,cod,coord.lon,coord.lat,main.temp,main.feels_like,main.temp_min,main.temp_max,main.pressure,main.humidity,main.sea_level,main.grnd_level,wind.speed,wind.deg,wind.gust,clouds.all,sys.type,sys.id,sys.country,sys.sunrise,sys.sunset
-[{'id': 804, 'main': 'Clouds', 'description': 'overcast clouds', 'icon': '04d'}],stations,10000,1691165047,7200,3165770,Province of Terni,200,12.3167,42.6833,290.7,289.82,288.25,292.13,1008,50,1008,925,2.12,296,4.03,99,2,2006069,IT,1691121899,1691173722
