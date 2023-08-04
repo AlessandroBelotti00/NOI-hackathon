@@ -2,8 +2,8 @@ import pandas as pd
 from datetime import datetime, time
 from matplotlib import pyplot as plt
 
-building_consumption = pd.read_csv("1_PV/data/Office building.csv")
-building_production = pd.read_csv("1_PV/data/PV plant.csv")
+building_consumption = pd.read_csv("data/Office building.csv")
+building_production = pd.read_csv("data/PV plant.csv")
 
 print(f"building_consumption COLUMNS: {building_consumption.columns}")
 print(f"building_production COLUMNS: {building_production.columns}")
