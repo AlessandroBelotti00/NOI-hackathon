@@ -1,23 +1,17 @@
 import pandas as pd
-import json
+from matplotlib import pyplot as plt
 
-energy_temp = pd.read_csv("data/DatiEnergyTemp.csv", delimiter=';')
-# json_file_path = "data/1_dataset.json"
+energy_temp = pd.read_csv("data/data.csv", delimiter=';')
 
-# with open(json_file_path, 'r') as json_file:
-#     data_dict = json.load(json_file)
+energy_temp['external'].apply(pd.to_numeric, errors='coerce')
+print(energy_temp.dtypes)
 
-# columns = list(data_dict[0])[0].split(';')
+energy_temp['external'] = [float(value) for value in energy_temp['external']]
 
-# energy_temp = pd.DataFrame(columns)
 
-# for el in data_dict:
-#     keys = list(el)[0]
-#     values = el[keys].split(';')
-#     keys = keys.split(';')
-#     result_dict = dict(zip(keys, values))
+plt.scatter(energy_temp['timestamp'], energy_temp['external'], color='blue')
+plt.title('Medium building consumption')
+plt.xlabel('Timestamp')
+plt.ylabel('Energy (Wh)')
 
-#     energy_temp = energy_temp.append(result_dict, ignore_index=True)
-
-# print(energy_temp)
 # energy_temp.to_csv('energy_temp_cleaned.csv', index=False)
