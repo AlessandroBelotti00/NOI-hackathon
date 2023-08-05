@@ -18,8 +18,8 @@ for index, row in building_consumption.iterrows():
     # Split the time part into hours, minutes, and seconds
     hours, minutes, seconds = map(int, time_part.split(":"))
 
-    #dt = datetime(row['Year'], row['Month'], row['Day'], hours, minutes, seconds)
-    dt = datetime(row['Year'], row['Month'], row['Day'])
+    dt = datetime(row['Year'], row['Month'], row['Day'], hours, minutes, seconds)
+    #dt = datetime(row['Year'], row['Month'], row['Day'])
 
     data_series.append(dt)
 building_consumption['Timestamp'] = data_series
