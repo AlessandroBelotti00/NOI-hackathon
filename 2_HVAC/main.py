@@ -12,6 +12,11 @@ def df1():
     energy_temp = pd.read_csv("exported_merged_power_product.csv", delimiter=',')
     st.write(energy_temp)
     
+    image = Image.open("energy_consumption.jpg")
+    st.image(image, caption="Neural Network Result", use_column_width=True) 
+    st.write("Results for the second model")
+    image = Image.open("power_consumption.png")
+    st.image(image, caption="Neural Network Result", use_column_width=True)
     
     if st.button("Launch the neural network 🤖"):
         st.write("Neural network launched!")
